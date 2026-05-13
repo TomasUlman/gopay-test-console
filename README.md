@@ -1,6 +1,6 @@
 # GoPay Test Console v1.0
 
-Local PHP testing console for GoPay REST API flows. It is built for local development on `localhost` and uses the official GoPay PHP SDK.
+Local PHP testing console for GoPay REST API flows. It is built for local development on `localhost` and uses the official GoPay PHP SDK. Not intended for production use.
 
 ## What it does
 
