@@ -1,0 +1,21 @@
+{
+  "name": "local/gopay-test-console",
+  "description": "GoPay Test Console v1.0 - local PHP testing console for GoPay REST API using the official GoPay PHP SDK.",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "gopay/payments-sdk-php": "^1.9",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "MissionTerminal\\": "app/"
+    }
+  },
+  "scripts": {
+    "serve": "php -S localhost:8080 -t public"
+  },
+  "version": "1.0.0"
+}
