@@ -232,8 +232,8 @@ if ($result) {
             <?php if ($result['error']): ?><div class="error-text"><?= e($result['error']) ?></div><?php endif; ?>
             <pre><?= e(pretty($result['json']) ?: $result['rawBody']) ?></pre>
             <?php if (!empty($result['json']['gw_url'])): ?>
-                <div class="button-row"><a class="button primary" href="<?= e($result['json']['gw_url']) ?>" data-feedback="Opening gateway in this window...">OPEN GATEWAY</a></div>
-            <?php endif; ?>
+                <div class="button-row"></div>
+            <?php endif; ?><a class="button primary" href="<?= e($result['json']['gw_url']) ?>" rel="noreferrer" referrerpolicy="no-referrer" data-feedback="Opening gateway in this window...">OPEN GATEWAY</a>
             <?php if (!empty($result['json']['id'])): ?>
                 <div class="next-actions">
                     <a class="button" href="/?environment=<?= e($cfg['environment']) ?>&action=payment_status&id=<?= e($result['json']['id']) ?>" data-feedback="Checking payment status...">CHECK STATUS</a>
