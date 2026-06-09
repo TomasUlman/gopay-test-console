@@ -1,0 +1,19 @@
+{
+  "name": "gopay-test-console-react-express",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local GoPay REST API testing console rebuilt with React, Vite, Tailwind and Express.",
+  "scripts": {
+    "dev": "concurrently \"npm:dev --workspace backend\" \"npm:dev --workspace frontend\"",
+    "start": "npm run start --workspace backend",
+    "build": "npm run build --workspace frontend",
+    "check": "npm run check --workspace backend"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
