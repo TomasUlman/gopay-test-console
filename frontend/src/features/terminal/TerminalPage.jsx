@@ -133,7 +133,7 @@ export function TerminalPage({ state, setState, toast, setToast }) {
       return;
     }
 
-    if ((action.danger || environment === 'production') && !window.confirm('This may affect real payment data. Continue?')) return;
+    if (action.danger && !window.confirm('This action can modify payment data. Continue?')) return;
 
     setSending(true);
     setToast({ type: 'info', message: action.tokenAction ? 'Requesting OAuth token...' : 'Request transmitted...' });
